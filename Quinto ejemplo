@@ -1,0 +1,28 @@
+using System;
+
+// Clase-principal
+class Fruta {
+    protected string nombre;
+
+    public Fruta(string nombre) {
+        this.nombre = nombre;
+    }
+
+    public void MostrarNombre() {
+        Console.WriteLine($"Nombre: {nombre}");
+    }
+}
+
+// Sub -clase
+class Manzana : Fruta {
+    public Manzana(string nombre) : base(nombre) {
+    }
+}
+
+// Programa
+class Program {
+    static void Main() {
+        Manzana miManzana = new Manzana("Manzana roja");
+        miManzana.MostrarNombre();
+    }
+}
