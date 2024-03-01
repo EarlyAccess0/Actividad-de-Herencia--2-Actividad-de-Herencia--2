@@ -1,0 +1,28 @@
+using System;
+
+// Clase principal
+class Vehiculo {
+    protected string marca;
+
+    public Vehiculo(string marca) {
+        this.marca = marca;
+    }
+
+    public void MostrarMarca() {
+        Console.WriteLine($"Marca: {marca}");
+    }
+}
+
+// Sub clase
+class Coche : Vehiculo {
+    public Coche(string marca) : base(marca) {
+    }
+}
+
+// Programa
+class Program {
+    static void Main() {
+        Coche miCoche = new Coche("Toyota");
+        miCoche.MostrarMarca(); 
+    }
+}
