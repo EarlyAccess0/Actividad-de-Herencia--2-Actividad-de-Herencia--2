@@ -1,0 +1,32 @@
+using System;
+
+// Clase-principal
+class Persona {
+    public string Nombre { get; set; }
+
+    public Persona(string nombre) {
+        Nombre = nombre;
+    }
+
+    public virtual void Saludar() {
+        Console.WriteLine($"Hola, soy {Nombre}.");
+    }
+}
+
+// Sub-clase
+class Estudiante : Persona {
+    public Estudiante(string nombre) : base(nombre) {
+    }
+
+    public override void Saludar() {
+        Console.WriteLine($"Hola, soy {Nombre} y soy estudiante de unibe.");
+    }
+}
+
+// Programa
+class Program {
+    static void Main() {
+        Persona persona = new Estudiante("Leo");
+        persona.Saludar();
+    }
+}
