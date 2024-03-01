@@ -1,0 +1,24 @@
+using System;
+
+// Clase principal
+class Animal {
+    public void Comer() {
+        Console.WriteLine("El animal come.");
+    }
+}
+
+// Sub clase
+class Perro : Animal {
+    public void Ladrar() {
+        Console.WriteLine("El perro ladra.");
+    }
+}
+
+// Programa
+class Program {
+    static void Main() {
+        Perro miPerro = new Perro();
+        miPerro.Comer();  
+        miPerro.Ladrar(); 
+    }
+}
